@@ -5,7 +5,7 @@ import routerPacientes from "./routes/pacientesRoutes.js"
 import cors from "cors";
 
 const app = express()
-const port = process.env.port || 4000
+const port = PORT || 4000
 
 connectDb()
 
