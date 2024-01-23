@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 
 app.use(express.json())
-app.use(cors({origin: "https://playful-moonbeam-e888a7.netlify.app/login", credentials: false}))
+app.use(cors({origin: "https://playful-moonbeam-e888a7.netlify.app", credentials: false}))
 app.use("/api/veterinarios", routerVeterinarios)
 app.use("/api/pacientes", routerPacientes)
 app.set('view engine', 'pug')
