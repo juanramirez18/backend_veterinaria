@@ -8,7 +8,7 @@ const app = express()
 const port = process.env.PORT || 4000
 
 connectDb()
-const dominios = ["https://playful-moonbeam-e888a7.netlify.app/login"];
+const dominios = ["https://playful-moonbeam-e888a7.netlify.app/"];
 const corsOptions = {
     origin: function(origin, callback){
         if(dominios.indexOf(origin) !== -1){
