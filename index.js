@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 const dominios = ['http://localhost:5173/'];
 var corsOptions = {
-    origin: 'https://playful-moonbeam-e888a7.netlify.app',
+    origin: 'https://helpful-shortbread-e3f1c3.netlify.app',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 app.use(express.json())
@@ -24,7 +24,7 @@ app.use(express.static('public'))
 app.listen(port, ()=>{
     console.log(`Server on ${port}`)
 
-})
+});
 
 
 
