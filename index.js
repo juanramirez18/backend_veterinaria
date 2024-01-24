@@ -8,19 +8,11 @@ const app = express()
 const port = process.env.PORT || 4000
 
 connectDb()
-const dominios = ["https://playful-moonbeam-e888a7.netlify.app/"];
-const corsOptions = {
-    origin: function(origin, callback){
-        if(dominios.indexOf(origin) !== -1){
-            callback(null, true)
-
-        }else{
-            callback(new Error("No permitido por cors"))
-
-        }
-
-    }
-}
+const dominios = ['http://localhost:5173/'];
+var corsOptions = {
+    origin: 'http://localhost:5173/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 app.use(express.json())
 app.use(cors(corsOptions))
 app.use("/api/veterinarios", routerVeterinarios)
