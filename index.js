@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 const dominios = ['http://localhost:5173/'];
 var corsOptions = {
-    origin: 'https://helpful-shortbread-e3f1c3.netlify.app/'
+    origin: ['https://helpful-shortbread-e3f1c3.netlify.app', 'https://helpful-shortbread-e3f1c3.netlify.app/login']
   }
 app.use(express.json())
 app.use(cors(corsOptions))
