@@ -13,7 +13,12 @@ var corsOptions = {
     origin: ['https://helpful-shortbread-e3f1c3.netlify.app', 'https://helpful-shortbread-e3f1c3.netlify.app/login']
   }
 app.use(express.json())
-app.use(cors(corsOptions))
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://example.com");
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+})
 app.use("/api/veterinarios", routerVeterinarios)
 app.use("/api/pacientes", routerPacientes)
 app.set('view engine', 'pug')
