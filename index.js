@@ -10,8 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 const dominios = ['http://localhost:5173/'];
 var corsOptions = {
-    origin: 'https://helpful-shortbread-e3f1c3.netlify.app/login',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+    origin: 'https://helpful-shortbread-e3f1c3.netlify.app'
   }
 app.use(express.json())
 app.use(cors(corsOptions))
