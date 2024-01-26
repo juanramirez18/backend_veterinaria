@@ -10,7 +10,9 @@ const port = process.env.PORT || 4000
 connectDb()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "https://helpful-shortbread-e3f1c3.netlify.app"
+}))
 app.use("/api/veterinarios", routerVeterinarios)
 app.use("/api/pacientes", routerPacientes)
 app.set('view engine', 'pug')
