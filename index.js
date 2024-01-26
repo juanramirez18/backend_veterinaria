@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors({
     origin: (origin, callback)=>{
         const ACCEPTEP_ORIGINS = [
-            'https://helpful-shortbread-e3f1c3.netlify.app/',
+            'https://helpful-shortbread-e3f1c3.netlify.app',
             'https://helpful-shortbread-e3f1c3.netlify.app/login',
             'http://localhost:5173/'
         ]
