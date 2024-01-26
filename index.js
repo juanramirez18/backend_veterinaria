@@ -10,23 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 
 app.use(express.json())
-app.use(cors({
-    origin: (origin, callback)=>{
-        const ACCEPTEP_ORIGINS = [
-            'https://helpful-shortbread-e3f1c3.netlify.app',
-            'https://helpful-shortbread-e3f1c3.netlify.app/login',
-            'http://localhost:5173/'
-        ]
-        if(ACCEPTEP_ORIGINS.includes(origin)){
-            return callback(null, true)
-        }
-        if(!origin){
-            return callback(null, true)
-        }
-        return callback(new Error("No allowed by CORS"))
-
-    }
-}))
+app.use(cors())
 app.use("/api/veterinarios", routerVeterinarios)
 app.use("/api/pacientes", routerPacientes)
 app.set('view engine', 'pug')
