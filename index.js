@@ -11,7 +11,7 @@ connectDb()
 
 app.use(express.json())
 app.use(cors({
-    origin: "https://helpful-shortbread-e3f1c3.netlify.app"
+    origin: "*"
 }))
 app.use("/api/veterinarios", routerVeterinarios)
 app.use("/api/pacientes", routerPacientes)
