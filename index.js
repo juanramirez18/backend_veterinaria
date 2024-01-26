@@ -10,6 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 
 app.use(express.json())
+app.use(cors())
 app.use("/api/veterinarios", routerVeterinarios)
 app.use("/api/pacientes", routerPacientes)
 app.set('view engine', 'pug')
