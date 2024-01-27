@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 connectDb()
 
 app.use(express.json())
-const dominiosPermitidos = [process.env.FRONTEND_URL];
+const dominiosPermitidos = [process.env.FRONTEND_URL, "https://helpful-shortbread-e3f1c3.netlify.app/login"];
 
 const corsOptions = {
   origin: function (origin, callback) {
